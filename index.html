@@ -1,12 +1,152 @@
 <!doctype html>
 <html lang="ru">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Портфолио</title>
 </head>
 <body>
-  <h1>Привет! Это моё портфолио</h1>
-  <p>Скоро добавлю проекты.</p>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Станислав К.</h1>
+          <p>Старший разработчик</p>
+        </div>
+      </div>
+      <nav>
+        <a class="pill" href="#about">О себе</a>
+        <a class="pill" href="#projects">Проекты</a>
+        <a class="pill" href="#contact">Контакты</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="hero-card">
+        <div class="hero-inner">
+          <div class="kicker"><span class="dot"></span>Портфолио разработчика</div>
+          <h2>Делаю интерфейсы, которые приятно использовать</h2>
+          <p class="sub">
+            Старший разработчик в студии Web-дизайна <b>“DarkPixel Studio”</b>.
+            Верстаю и проектирую фронтенд так, чтобы он был быстрым, аккуратным и поддерживаемым.
+          </p>
+          <div class="cta-row">
+            <a class="btn primary" href="#contact">Связаться</a>
+            <a class="btn" href="#projects">Смотреть проекты</a>
+          </div>
+          <div class="tag-row" aria-label="стек">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Performance</span>
+            <span class="tag">UX</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="side-stats">
+        <div class="stat">
+          <b>Фокус</b>
+          <span>мобильная верстка, скорость, адаптивность, чистая структура</span>
+        </div>
+        <div class="stat">
+          <b>Формат</b>
+          <span>малостраничные сайты и интерфейсы “под задачу”</span>
+        </div>
+        <div class="stat">
+          <b>Контакт</b>
+          <span><a href="mailto:darklord@gmail.com">darklord@gmail.com</a></span>
+        </div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="section-title">
+        <h3>О себе</h3>
+        <p>коротко и по делу</p>
+      </div>
+
+      <div class="grid">
+        <div class="card col-6">
+          <h4>Как работаю</h4>
+          <p class="muted">
+            Понимаю задачу → предлагаю структуру → собираю интерфейс → довожу до качества:
+            типографика, отступы, состояния, адаптив и базовая SEO-логика.
+          </p>
+        </div>
+        <div class="card col-6">
+          <h4>Что ценю</h4>
+          <p class="muted">
+            Предсказуемость кода, понятные компоненты (на уровне разметки), минимальные
+            зависимостями и скорость загрузки.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-title">
+        <h3>Проекты</h3>
+        <p>добавим ссылки позже</p>
+      </div>
+
+      <div class="projects">
+        <article class="proj">
+          <div class="top">
+            <div>
+              <b>Проект #1: Landing для студии</b>
+              <div class="small">аккуратная типографика + адаптив + CTA</div>
+            </div>
+            <div class="tag">2026</div>
+          </div>
+          <div class="links">
+            <a class="link" href="#" onclick="alert('Замените # на ссылку на ваш сайт-проект'); return false;">Открыть</a>
+            <a class="link" href="#" onclick="alert('Замените # на ссылку на репозиторий'); return false;">GitHub</a>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="top">
+            <div>
+              <b>Проект #2: Портфолио/каталог</b>
+              <div class="small">карточки, фильтры (если нужны), чистая верстка</div>
+            </div>
+            <div class="tag">2026</div>
+          </div>
+          <div class="links">
+            <a class="link" href="#" onclick="alert('Замените # на ссылку на ваш сайт-проект'); return false;">Открыть</a>
+            <a class="link" href="#" onclick="alert('Замените # на ссылку на репозиторий'); return false;">GitHub</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="muted" style="margin-top:12px; font-size:14px">
+        Когда сделаете следующий сайт, просто вставим ссылки в кнопки “Открыть”.
+      </p>
+    </section>
+
+    <section id="contact">
+      <div class="section-title">
+        <h3>Контакты</h3>
+        <p>быстро отвечу</p>
+      </div>
+
+      <div class="grid">
+        <div class="card col-12">
+          <h4>Напишите мне</h4>
+          <p class="muted">Можно письмом или просто скопировать email.</p>
+          <div class="form-row">
+            <input class="input" type="text" value="darklord@gmail.com" readonly />
+            <a class="btn primary" href="mailto:darklord@gmail.com?subject=Заявка%20на%20проект%20(портфолио)">Почта</a>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        © <span id="year"></span> Станислав К. • Сделано с любовью к аккуратной верстке
+      </footer>
+    </section>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
